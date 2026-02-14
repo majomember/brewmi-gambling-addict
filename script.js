@@ -36,7 +36,7 @@ const DISCOUNTS = [
     { text: "10% Off Order", icon: "🎫", color: "#ffccd5", probability: 30, needsDisclaimer: false },
     { text: "Free Topping", icon: "🍓", color: "#e44947", probability: 26, needsDisclaimer: true },
     { text: "20% Off Order", icon: "🎉", color: "#ffccd5", probability: 12, needsDisclaimer: false },
-    { text: "40% Off Order", icon: "🌟", color: "#e44947", probability: 4, needsDisclaimer: false },
+    { text: "35% Off Order", icon: "🌟", color: "#e44947", probability: 4, needsDisclaimer: false },
     { text: "Free Upgrade to L", icon: "⬆️", color: "#ffccd5", probability: 14, needsDisclaimer: true },
     { text: "Free Drink (M)", icon: "☕", color: "#e44947", probability: 4, needsDisclaimer: false }
 ];
@@ -453,3 +453,4 @@ if (document.readyState === 'loading') {
     init();
 
 }
+
