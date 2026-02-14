@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brewmi Fortune Wheel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <img src="brewmi-valentines-logo.png" alt="Brewmi Logo" class="loading-logo-img">
+            </div>
+            <div class="loading-spinner">
+                <div class="spinner"></div>
+            </div>
+            <p class="loading-text">Loading your fortune wheel...</p>
+            <div class="loading-hearts">
+                <span class="heart">♥</span>
+                <span class="heart">♥</span>
+                <span class="heart">♥</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Social Media Modal -->
+    <div id="socialModal" class="social-modal">
+        <div class="social-content">
+            <div class="social-header">
+                <h2>🎉 Congratulations! 🎉</h2>
+                <p class="social-subtitle">Help us spread the love!</p>
+            </div>
+            
+            <div class="social-body">
+                <p class="social-message">To claim your <strong id="socialCouponText">discount</strong>, please follow us on Instagram!</p>
+                
+                <div class="social-actions">
+                    <!-- Instagram Follow -->
+                    <div class="social-item">
+                        <div class="social-icon-wrapper">
+                            <span class="social-emoji">📸</span>
+                        </div>
+                        <div class="social-details">
+                            <h3>Follow @brewmi on Instagram</h3>
+                            <p>Scan the QR code below</p>
+                            <div class="qr-code-container">
+                                <img src="insta-qr.png" alt="Instagram QR Code" class="qr-code">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-note">
+                    <p>✨ Show our staff that you've followed us to claim your discount!</p>
+                </div>
+            </div>
+
+            <button id="closeSocialModal" class="social-close-btn">
+                I've Followed! Show My Coupon
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Application -->
+    <div class="container" id="mainApp">
+        <header>
+            <div class="header-hearts"></div>
+            <div class="header-content">
+                <div class="logo-container">
+                    <img src="brewmi-valentines-logo.png" alt="Brewmi Valentines Logo" class="brewmi-logo">
+                </div>
+                <h2 class="title-fortune">FORTUNE WHEEL</h2>
+                <p class="subtitle">Spin the wheel to get your discount!</p>
+            </div>
+        </header>
+
+        <main>
+            <div class="wheel-container">
+                <div class="wheel-pointer">▼</div>
+                <canvas id="wheelCanvas" width="350" height="350"></canvas>
+                
+                <button id="spinButton" class="spin-button">
+                    <span class="spin-icon">🎡</span>
+                    <span class="spin-text">SPIN</span>
+                </button>
+            </div>
+
+            <div class="game-status">
+                <p id="statusMessage">Ready to play? You have <strong id="playsLeft">2</strong> spins remaining.</p>
+            </div>
+
+            <div class="coupon-section">
+                <h2>YOUR COUPON</h2>
+                <div class="coupon-wrapper">
+                    <div id="couponDisplay" class="coupon-display">
+                        <p class="placeholder">🎁 Spin to win a discount! 🎁</p>
+                    </div>
+                    <div class="coupon-holder">
+                        <img src="coupon-holder.png" alt="Coupon Holder" class="holder-image">
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button id="playAgainBtn" class="btn btn-play-again" style="display: none;">
+                    Spin Again
+                </button>
+                <button id="resetSessionBtn" class="btn btn-reset" style="display: none;">
+                    Reset
+                </button>
+            </div>
+        </main>
+
+        <footer>
+            <p>🌟 Present this screen to claim your discount! 🌟</p>
+            <p class="footer-note">One discount per customer. Not valid with other promotions.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
